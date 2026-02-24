@@ -40,7 +40,7 @@ jobs:
 
       - name: Start services
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose.yml \
             -f environments/docker-compose.prod.yml \
             up -d --build
@@ -83,7 +83,7 @@ jobs:
       - name: Tear down services
         if: always()
         run: |
-          docker-compose \
+          docker compose \
             -f docker-compose.yml \
             -f environments/docker-compose.prod.yml \
             down -v
