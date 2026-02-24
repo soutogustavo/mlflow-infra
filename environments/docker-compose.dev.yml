@@ -1,0 +1,8 @@
+services:
+  postgres:
+    volumes:
+      - ~/mlflow-data/postgres:/var/lib/postgresql/data
+
+  minio:
+    volumes:
+      - ~/mlflow-data/minio:/data
